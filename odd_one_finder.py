@@ -2,12 +2,12 @@
 # This is created by Tirth Bal
 # Description
 # -----------
-#This script will compare th our native process file with current process file 
+#This script will compare  our native process file with current process file 
 # and give us the odd one out.
 
 # Scope
 #------
-# You can do this with some different and more efficient algorithm and ca use functional programming. 
+# You can do this with some different and more efficient algorithm and can use functional programming. 
 
 with open("temp1",'r') as fi :
       list_proc = fi.read()
@@ -25,4 +25,9 @@ for  w in new_cur_proc:
      if w not in process_dict:
            print w
 
-    
+log=open('log.txt','w')
+
+for  w in new_cur_proc:
+     if w not in process_dict:
+           print >> log,w
+
