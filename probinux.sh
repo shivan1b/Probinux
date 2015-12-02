@@ -19,7 +19,7 @@ sed -e '1,7d' < cur_proc > .tmp &&
 rm cur_proc &&
 mv .tmp cur_proc &&
 gcc AESDec.c -o AES -lmcrypt &&
-./AES &&
+./AES && cat temp > dictionary &&
 python odd_one_finder.py &&
 gcc AESEnc.c -o AES -lmcrypt &&
 ./AES &&
